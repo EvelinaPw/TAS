@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinClientApp.JenisMotorPage">
+  <StackLayout>
+    <ListView x:Name="listJenisMotor" ItemsSource="{Binding ListJenisMotor}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding IdJenisMotor}"
+                    Detail="{Binding NamaJenisMotor}" DetailColor="Red" />
+          
+        </DataTemplate>
+        
+      </ListView.ItemTemplate>
+      
+    </ListView>
+    <Entry x:Name="txtSearch" Placeholder="Input nama jenis motor" />
+    <Button x:Name="btnSearch" Text="Search" />
+    <Button x:Name="btnTambah" Text="Tambah" />
+  </StackLayout>
+</ContentPage>
